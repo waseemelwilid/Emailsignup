@@ -1,0 +1,62 @@
+<!-- BEGIN: Signup Form Manual Code from Benchmark Email Ver 3.0  -->
+
+<style type="text/css">
+.formbox-editor-1761133 {margin: 0 auto;padding: 30px 40px;text-align: left;max-width: 100%;box-sizing: border-box;}
+.formbox-editor-1761133 fieldset {border: none;margin: 0;padding: 0;position: relative;}
+.formbox-editor-1761133 fieldset > input, .formbox-editor fieldset > textarea, .formbox-editable-field {margin: 10px 0;outline: none;}
+.formbox-title-1761133 {background: none;border: none;color: #000;font-family: Helvetica, Arial, sans-serif;font-size: 20px;padding: 0;width: 100%;word-break: break-word;margin: 10px 0;}
+.formbox-title-1761133 {border-radius: 0;min-height: 0;}
+input.formbox-field-1761133 {border: 2px solid #f1f2f2;border-radius: 0;box-sizing: border-box;color: #000;font-family: Helvetica, Arial, sans-serif;font-size: 14px;padding: 15px;width: 100%;height: auto;}
+input.field-error-1761133 {border-color: #f15858;}
+input.formbox-button-1761133 {background-color: #21292d;border-width: 0;border-style: solid;border-color: #21292d;border-radius: 8px;color: #fff;display: inline-block;font-family: Helvetica, Arial, sans-serif;font-size: 14px;font-weight: 600;padding: 15px;margin: 10px 0;text-align: center;word-break: break-all;cursor: pointer;}
+button.formbox-button-1761133 {background-color: #21292d;border-width: 0;border-style: solid;border-color: #21292d;border-radius: 8px;color: #fff;display: inline-block;font-family: Helvetica, Arial, sans-serif;font-size: 14px;font-weight: 600;padding: 15px;margin: 10px 0;text-align: center;word-break: break-all;cursor: pointer;}
+.formbox-editor-1761133{background-color:#ffffff !important;}.formbox-title-1761133{font-family:Helvetica, Arial, sans-serif !important;font-size:20px !important;color:#000000 !important;text-align:left !important;}.formbox-button-1761133{font-family:Helvetica, Arial, sans-serif !important;font-size:14px !important;font-weight:600 !important;color:#ffffff !important;background-color:#21292d !important;border-radius:2px !important;border-color:#21292d !important;border-width:0px !important;border-style:solid;} #tdLogo1761133 img{margin-botton:10px; max-width:230px;}
+</style>
+<script type="text/javascript">
+function CheckField1761133(fldName, frm){  var fldObj = document.getElementsByName(fldName); if ( fldObj.length > 1) { for ( var i = 0, l = fldObj.length; i < l; i++ ) {  if ( fldObj[0].type =='select-one' ) { if( fldObj[i].selected && i==0 && fldObj[i].value == '' ) { return false; }  if ( fldObj[i].selected ) { return true; } }  else { if ( fldObj[i].checked ) { return true; } }; } return false; } else { if ( fldObj[0].type == "checkbox" ) { return ( fldObj[0].checked ); } else if ( fldObj[0].type == "radio" ) { return ( fldObj[0].checked ); } else { fldObj[0].focus(); return (fldObj[0].value.length > 0); }} }
+function _doSubmit1761133(frm) { if( _checkSubmit1761133(frm)){ _doPost1761133(frm);}}
+function _doPost1761133(frm) { var f = document.createElement("form"); f.setAttribute('accept-charset', "UTF-8");  f.setAttribute('method', "post"); f.setAttribute('action', "https://lb.benchmarkemail.com//code/lbform"); var elms = document.getElementsByName("frmLB" + frm)[0].getElementsByTagName("*");var ty = ""; for (var ei = 0; ei < elms.length; ei++) {ty = elms[ei].type; if (ty == "hidden" || ty == "text" || (ty == "checkbox" && elms[ei].checked) || (ty == "radio" && elms[ei].checked) || ty == "textarea" || ty == "select-one" || ty == "button") {elm = elms[ei]; var i = document.createElement("input"); i.type = "hidden"; i.name = elm.name.replace("_N2WWL", ""); i.id = elm.id; i.value = elm.value; f.appendChild(i);} } document.getElementsByTagName('body')[0].appendChild(f);f.submit();}function rmspaces(x) {var leftx = 0;var rightx = x.length -1;while ( x.charAt(leftx) == ' ') { leftx++; }while ( x.charAt(rightx) == ' ') { --rightx; }var q = x.substr(leftx,rightx-leftx + 1);if ( (leftx == x.length) && (rightx == -1) ) { q =''; } return(q); }
+function checkfield(data) {if (rmspaces(data) == ""){return false;}else {return true;}}
+function isemail(data) {var flag = false;if (  data.indexOf("@",0)  == -1 || data.indexOf("\\",0)  != -1 ||data.indexOf("/",0)  != -1 ||!checkfield(data) ||  data.indexOf(".",0)  == -1  ||  data.indexOf("@")  == 0 ||data.lastIndexOf(".") < data.lastIndexOf("@") ||data.lastIndexOf(".") == (data.length - 1)   ||data.lastIndexOf("@") !=   data.indexOf("@") ||data.indexOf(",",0)  != -1 ||data.indexOf(":",0)  != -1 ||data.indexOf(";",0)  != -1  ) {return flag;} else {var temp = rmspaces(data);if (temp.indexOf(' ',0) != -1) { flag = true; }var d3 = temp.lastIndexOf('.') + 4;var d4 = temp.substring(0,d3);var e2 = temp.length  -  temp.lastIndexOf('.')  - 1;var i1 = temp.indexOf('@');if (  (temp.charAt(i1+1) == '.') || ( e2 < 1 ) ) { flag = true; }return !flag;}}
+function _checkSubmit1761133(frm){
+if ( !CheckField1761133("fldfirstname_N2WWL", frm) ) { 
+   alert("Please enter the First Name");
+   return false;
+}
+if ( !isemail(document.getElementsByName("fldEmail_N2WWL")[0].value) ) { 
+   alert("Please enter the Email Address ");
+   return false;
+}
+
+if(isemail(document.getElementsByName("fldEmail_N2WWL")[0].value) && window && window.JB_TRACKER && typeof window.JB_TRACKER.jbSubmitForm === 'function') { 
+ window.JB_TRACKER.jbSubmitForm({ 
+ email: document.getElementsByName("fldEmail_N2WWL")[0].value, didSubmit: true 
+ }); 
+ }
+
+ return true; }
+</script>
+<div align="center">
+<div class="formbox-editor-1761133" style="background: #fff; width: 320px;">
+<div style="display:inline;" name="frmLB1761133">
+<input type=hidden name=successurl value="https://lb.benchmarkemail.com/Code/Welcome?language=" />
+<input type=hidden name=errorurl value="https://lb.benchmarkemail.com//Code/Error" />
+<input type=hidden name=token value="mFcQnoBFKMQxCsfsAw0Ro8VHaffN5KY0aStEknjR9aZucQTGBp%2FJaQ%3D%3D" />
+<input type=hidden name=doubleoptin value="0" /><fieldset><div class="formbox-title-1761133">Email Sign up</div></fieldset>
+<fieldset class="formbox-field-fname-1761133">
+<input type=text placeholder="First Name *" class="formbox-field-1761133" name="fldfirstname_N2WWL" maxlength=100 />
+</fieldset>
+<fieldset class="formbox-field-add-1761133">
+<input type=text placeholder="Last Name" class="formbox-field-1761133" name="fldlastname_N2WWL" maxlength=100 />
+</fieldset>
+<fieldset class="formbox-field-email-1761133">
+<input type=text placeholder="Email Address  *" class="formbox-field-1761133" name="fldEmail_N2WWL" maxlength=100 />
+</fieldset>
+
+<fieldset><button type="button" id="btnSubmit" krydebug="1751" class="formbox-button-1761133" onclick="javascript:_doSubmit1761133('1761133');"  >Subscribe</button></fieldset></div>
+</div>
+</div>
+<!-- BEGIN: Email Marketing By Benchmark Email  --><p class="email-marketing-by-b"style="color: #555555; font-family: Helvetica; font-size: 10px; line-height: 12px; text-align: center; margin-top: 24px;"> <a href="https://www.benchmarkemail.com/email-marketing?utm_source=signupform&utm_campaign=embedform" target="_blank" style="text-decoration: underline; color: #555555;">Email Marketing</a> <style="color: #555555; font-family: Helvetica; font-size: 10px; line-height: 12px; text-align: center; margin-top: 24px;"> by Benchmark</p><!-- END: Email Marketing By Benchmark Email  -->
+
+
+<!-- END: Signup Form Manual Code from Benchmark Email Ver 3.0 [1][3][1]  -->
